@@ -21,4 +21,5 @@ Contains utility scripts for the online game Dragon Cave. Currently has a click 
 
     Refreshers browser as many times as you want after a 5 second delay. 
     Make sure to open your scroll in a browser before using the script and having
-    it as the active tab while using the script.
+    it as the active tab while using the script. Most useful for low time (less than
+    4 days left) dragons who's views is not 15 times the unique views.  
