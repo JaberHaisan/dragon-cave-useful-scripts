@@ -19,6 +19,6 @@ Contains utility scripts for the online game Dragon Cave. Currently has a click 
 
 * *Refresher*:
 
-    Refreshers browser as many times as you want after a 5 second delay. If you want to add
-    views to your own dragons, make sure to open the page to your scroll in the
-    share section before starting refresher. 
+    Refreshers browser as many times as you want after a 5 second delay. 
+    Make sure to open your scroll in a browser before using the script and having
+    it as the active tab while using the script.
