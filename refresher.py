@@ -1,4 +1,5 @@
-import pyautogui, time 
+import pyautogui
+import time 
 
 def refresher(n):
 	"""Presses f5 n times."""
