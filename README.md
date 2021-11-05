@@ -4,7 +4,7 @@
 
 Contains utility scripts for the online game Dragon Cave. Currently has a click site opener and a refresher.
 
-* *Dragon Cave Click Sites Opener*:
+* *click_sites_opener.py*:
 
     Opens click sites where you can add your dragons for views in your default browser.
     All the click sites used do not need a log in. At the moment these 7 sites are opened:
@@ -17,7 +17,7 @@ Contains utility scripts for the online game Dragon Cave. Currently has a click 
     7) http://valleysherwood.com/
 
 
-* *Refresher*:
+* *refresher.py*:
 
     Refreshers browser as many times as you want after a 5 second delay. 
     Make sure to open your scroll in a browser before using the script and having
