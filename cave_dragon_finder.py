@@ -15,11 +15,11 @@ required_eggs = {
 	"Dino": "This egg looks like it doesn't belong; it is brightly colored with white spots. It's much warmer than the rest of the eggs."
 		}
 
-# Sets the number of seconds between each search.
-refresh_secs = 0
-
 # Name of sound file.
 sound_file = "alarm.mp3"
+
+# Sets the number of seconds between each search.
+refresh_secs = 0
 
 # Locations to go through. Comment out any locations you don't need searching through.
 locations = {
