@@ -18,6 +18,9 @@ required_eggs = {
 # Sets the number of seconds between each search.
 refresh_secs = 0
 
+# Name of sound file.
+sound_file = "alarm.mp3"
+
 # Locations to go through. Comment out any locations you don't need searching through.
 locations = {
 	"Alpine": "https://dragcave.net/locations/5", 
@@ -50,7 +53,9 @@ def main():
 				if req_desc in egg_decs:
 					print(f"Found: {name} in {location}. Hurry!")
 					webbrowser.open(link)
-					playsound.playsound("alarm.mp3")
+					playsound.playsound(sound_file)
 					
 		# Refresh every refresh_secs.
 		time.sleep(refresh_secs)
+
+main()
