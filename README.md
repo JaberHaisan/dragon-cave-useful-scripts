@@ -6,7 +6,6 @@ Contains utility scripts for the online game Dragon Cave. Currently has a cave d
 
 
 ### 1. *cave_dragon_finder.py*:
-   
    Searches through biomes in the cave for any eggs you want while script is active. If any of the eggs are
    found, the script plays an alarm and opens the page of the biome with the egg in your default browser.
    Requires bs4 and playsound.
@@ -19,8 +18,7 @@ Contains utility scripts for the online game Dragon Cave. Currently has a cave d
    Optional changes:
    1) Change locations as you require at the moment. For example if the egg you want is found in only
    the Alpine biome, comment out all the other biomes.
-   2) Set up refresh_secs with the time between each search in seconds (Going through all 6 biomes 
-      takes about 6 seconds for me so I set it with a default value of 0).
+   2) Set up refresh_secs with the time between each search in seconds. Default is 2 seconds.
 
 ### 2. *click_sites_opener.py*:
 Opens click sites where you can add your dragons for views in your default browser. 
