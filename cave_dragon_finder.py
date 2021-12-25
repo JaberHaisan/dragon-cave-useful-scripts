@@ -7,7 +7,7 @@ import bs4
 import playsound
 
 # Names and Descriptions of eggs that you want to acquire. The name doesn't 
-# have to be accurate as it's only for printing but description should be match
+# have to be accurate as it's only for printing but description should match
 # exactly so copy paste description of the egg you want from the wiki.
 required_eggs = {
 	"Paper": "This egg is tiny and made out of several pieces of paper folded together.", 
