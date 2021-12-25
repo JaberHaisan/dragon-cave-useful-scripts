@@ -1,25 +1,26 @@
 import requests
 import webbrowser
 import time
+import threading
 
 import bs4
 import playsound
 
-# Names and Descriptions of eggs that you want to acquire. Name doesn't 
-# have to be accurate as it's only for printing. Copy paste description
-# of egg from wiki.
+# Names and Descriptions of eggs that you want to acquire. The name doesn't 
+# have to be accurate as it's only for printing but description should be match
+# exactly so copy paste description of the egg you want from the wiki.
 required_eggs = {
 	"Paper": "This egg is tiny and made out of several pieces of paper folded together.", 
-	"Chicken": "This egg is much smaller than the others.", 
 	"Leetle": "Oh my. There is a Leetle Tree among the eggs.", 
-	"Dino": "This egg looks like it doesn't belong; it is brightly colored with white spots. It's much warmer than the rest of the eggs."
+	"Dino": "This egg looks like it doesn't belong; it is brightly colored with white spots. It's much warmer than the rest of the eggs.",
+	"Xeno": "Mana flows like a current through this glassy egg.",
 		}
 
 # Name of sound file.
 sound_file = "alarm.mp3"
 
 # Sets the number of seconds between each search.
-refresh_secs = 0
+refresh_secs = 2
 
 # Locations to go through. Comment out any locations you don't need searching through.
 locations = {
@@ -41,21 +42,33 @@ def get_egg_descs(link):
 	
 	return egg_decs
 
+def search_location(location, link):
+	"""Searches given link and checks if any current egg descriptions 
+	matches any of the required eggs. If any egg is found, opens default 
+	web browser in that biome, sounds an alarm and prints information 
+	about the egg found to screen."""
+	egg_decs = get_egg_descs(link)	
+	for name, req_desc in required_eggs.items():
+		if req_desc in egg_decs:
+			print(f"Found: {name} in {location}. Hurry!")
+			webbrowser.open(link)
+			playsound.playsound(sound_file)
+					
 def main():
 	while True:
+		# Create threads.
+		threads = []
 		for location, link in locations.items():
-			egg_decs = get_egg_descs(link)
-			
-			# Check if any current egg description matches any of the required eggs.
-			# If found, open default web browser in that biome, sound an alarm
-			# and print information about the egg found to screen.
-			for name, req_desc in required_eggs.items():
-				if req_desc in egg_decs:
-					print(f"Found: {name} in {location}. Hurry!")
-					webbrowser.open(link)
-					playsound.playsound(sound_file)
-					
-		# Refresh every refresh_secs.
+			thread = threading.Thread(target=search_location, args=(location, link))
+			threads.append(thread)
+		
+		# Start and join threads.
+		for thread in threads:
+			thread.start()
+		for thread in threads:
+			thread.join()
+		
+		# Delay between each search.
 		time.sleep(refresh_secs)
-
+			
 main()
