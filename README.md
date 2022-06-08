@@ -1,6 +1,6 @@
 ## dragon-cave-useful-scripts
 
-#### External modules required: bs4, playsound, pyautogui
+#### External modules required: bs4, playsound, pyautogui, lxml
 
 Contains utility scripts for the online game Dragon Cave. Currently has a cave dragon finder, a click site opener and a refresher.
 
