@@ -38,7 +38,7 @@ A loose collection of utility scripts for the online game Dragon Cave. Currently
 
 ### 3. *refresher.py*:
 
-   ##### External modules required: pyautogui, 
+   ##### External modules required: pyautogui
    Refreshers browser as many times as you want after a 5 second delay to give views to
    egg/hatchling stage dragons. Make sure to open your scroll in a browser before using the script 
    and having it as the active tab while using the script. Most useful for low time (less than
