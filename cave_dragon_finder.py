@@ -80,7 +80,7 @@ class Dragon():
 
 		name [str]: Name of dragon.
 		desc [str]: Description of dragon."""
-		self. name = name
+		self.name = name
 		self.desc = desc
 	 
 	def __repr__(self):
