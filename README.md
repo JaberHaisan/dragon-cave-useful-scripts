@@ -23,17 +23,8 @@ A loose collection of utility scripts for the online game Dragon Cave. Currently
 
 ### 2. *click_sites_opener.py*:
    Opens click sites where you can add your dragons for views in your default browser. 
-   All the click sites used do not need logging in. No external module is necessary
-   to use this scipt.
-
-   At the moment these 7 sites are opened:
-   1) https://www.allureofnds.net/
-   2) http://dragonbreederscave.com/index.php?page=hatcheryII
-   3) http://hatching.club/
-   4) http://greg-kennedy.com/dragcave/
-   5) http://dc.evinext.com/
-   6) http://lair.silverdrak.de/
-   7) http://valleysherwood.com/
+   All the click sites used do not need logging in and were collected from the dragon cave wiki. 
+   No external module is necessary to use this scipt.
 
 
 ### 3. *refresher.py*:
